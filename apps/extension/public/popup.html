@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApplyPilot AI</title>
+    <style>
+        body {
+            width: 350px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            margin: 0;
+            padding: 16px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 12px;
+        }
+        .logo {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
+        .status {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #94a3b8;
+            text-align: center;
+        }
+        .field-list {
+            margin-top: 16px;
+            max-height: 250px;
+            overflow-y: auto;
+            border-radius: 6px;
+            background-color: #1e293b;
+            padding: 8px;
+            display: none;
+        }
+        .field-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            border-bottom: 1px solid #334155;
+            font-size: 13px;
+        }
+        .field-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">A</div>
+        <h1 class="title">ApplyPilot AI</h1>
+    </div>
+
+    <button id="scan-btn" class="btn-primary">Scan Form Fields</button>
+    
+    <div id="status" class="status">Ready to scan current page.</div>
+    
+    <div id="field-list" class="field-list"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
